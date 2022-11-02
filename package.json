@@ -1,0 +1,14 @@
+{
+  "name": "acadelle-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "."
+  },
+  "author": "sanelieu",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
