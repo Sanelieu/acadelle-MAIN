@@ -13,7 +13,7 @@ module.exports = {
     description: 'blank command',
     execute(message, args){
         if (!permitID.includes(message.author.id)) return;
-
+        
         message.channel.send ('seems that you have a permit ^^');
     }
 }
