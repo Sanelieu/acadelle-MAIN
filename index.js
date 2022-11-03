@@ -44,16 +44,9 @@ client.on('message', message => {
 // ban command
 client.on("messageCreate", (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-  
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-  
-  
-    //message array
-    const messageArray = message.content.split(" ");
-    const argument = messageArray.slice(1);
-    const smd = messageArray[0];
-  
+
     //ban
   if (command === 'ban') {
     const member = message.mentions.members.first() || message.guild.members.cache.get(argument[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === argument.slice(0).join(" " || x.user.username === argument[0]));
@@ -83,22 +76,13 @@ client.on("messageCreate", (message) => {
   
     message.channel.send({embeds: [embed]});
   }
-  
-  
   });
 
 // kick command
 client.on("messageCreate", (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-
-
-    // message array
-    const messageArray = message.content.split(" ");
-    const argument = messageArray.slice(1);
-    const smd = messageArray[0];
 
     // kick
     if (command === 'kick') {
@@ -129,8 +113,6 @@ client.on("messageCreate", (message) => {
 
         message.channel.send({embeds: [embed]});
     }
-
-
 });
 
 
