@@ -53,8 +53,8 @@ client.on('message', message => {
     if(command === 'permittest'){
         client.commands.get('permittest').execute(message, args);
     } else {
-        if(command == 'support'){
-            client.commands.get('support').execute(message, args, Discord);
+        if(command == 'plist'){
+            client.commands.get('permitlist').execute(message, args);
         }
     }
 });
