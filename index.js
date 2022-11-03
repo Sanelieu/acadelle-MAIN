@@ -31,6 +31,13 @@ client.on('message', message => {
             client.commands.get('support').execute(message, args, Discord);
         }
     }
+    if(command === 'plain'){
+        client.commands.get('plain').execute(message, args);
+    } else {
+        if(command == 'update'){
+            client.commands.get('update').execute(message, args, Discord);
+        }
+    }
 });
 
 
