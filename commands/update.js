@@ -1,3 +1,5 @@
+// tier 1 - base
+
 module.exports = {
     name: 'update', 
     description: 'update embed',

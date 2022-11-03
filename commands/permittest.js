@@ -1,3 +1,5 @@
+// tier 4 - permits
+
 const Discord = require("discord.js");
 const permitID = ("896962315512086549", "937418844966879243", "877940496352301096")
 

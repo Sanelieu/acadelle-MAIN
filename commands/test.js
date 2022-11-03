@@ -1,3 +1,5 @@
+// tier 2 - user
+
 module.exports = {
     name: 'test',
     description: 'Test ping command',
