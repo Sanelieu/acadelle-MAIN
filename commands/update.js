@@ -10,7 +10,7 @@ module.exports = {
         .setURL('')
         .setDescription('Bot version: v0.1 (beta)')
         .addFields(
-            {name:'💜 New commands available: 💜', value: '.test \n.support \n.update \n.permittest'}
+            {name:'💜 New commands available: 💜', value: '.test \n.support \n.update \n.permittest \n.plist'}
         )
         .setImage('https://i.pinimg.com/originals/1e/68/4d/1e684d15ad21997f1a92adfae922cfe5.gif');
         
