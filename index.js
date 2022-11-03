@@ -42,8 +42,20 @@ client.on('message', message => {
 });
 
 
+// testing - sanelieu w/ permit permissions
+client.on('message', message => {
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    const args =  message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
 
-
+    if(command === 'permittest'){
+        client.commands.get('permittest').execute(message, args);
+    } else {
+        if(command == 'support'){
+            client.commands.get('support').execute(message, args, Discord);
+        }
+    }
+});
 
 
 // dont scroll past this point
