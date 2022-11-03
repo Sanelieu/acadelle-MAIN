@@ -1,6 +1,8 @@
 id                                          reason
 -------------------------------------------------------
+      payment: $ItsFuckinClover (cashapp) - $150
 
+      
 896962315512086549 [Emerald]                bot owner
 937418844966879243 [Matt]                   boyfriend
 877940496352301096 [Angel]                  bestfriend
