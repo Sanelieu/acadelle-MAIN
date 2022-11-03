@@ -19,7 +19,7 @@ client.once('ready', () => {
 
 // commands --------------------------------------------------------------------------------------------------
 
-// from handler
+// from handler (tier 1-2)
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args =  message.content.slice(prefix.length).split(/ +/);
@@ -41,8 +41,10 @@ client.on('message', message => {
     }
 });
 
+// tier 3 handles
 
-// testing - sanelieu w/ permit permissions
+
+// tier 4 handles
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args =  message.content.slice(prefix.length).split(/ +/);
