@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.';
+const config = require('./config.json');
 const fs = require('fs');
 //import dotenv from 'dotenv'
 //dotenv.config()
@@ -81,7 +82,7 @@ client.on('message', (message) => {
   });
 
 // tier 3 handles
-
+// ban, unban, kick, timeout, etc.
 
 // tier 4 handles
 client.on('message', message => {
@@ -98,38 +99,11 @@ client.on('message', message => {
     }
 });
 
-
 // commands --------------------------------------------------------------------------------------------------
 // these were made offline, and to be tested
 
 
 
 // -----------------------------------------------------------------------------------------------------------
-// dont scroll past this point
+client.login(config.token) //acadelle
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//client.login();
-client.login('MTAzNjMxOTU5ODM3NjY2OTIzNw.Gv2wSs.Lskk_SgcpMD-IAvI8bTeUqoqmYSHIa5yi1Crss');

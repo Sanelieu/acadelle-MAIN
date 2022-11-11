@@ -1,0 +1,34 @@
+1: base
+-autoreply
+
+2: user
+-self ban
+-vc join
+-vc disconnect
+-ticket create
+-mod mail
+-afk
+
+3: admins/mods
+-ban
+-unban
+-kick
+-timeout
+-clear
+-new channel
+-vc ban
+-vc kick
+-vc timeout
+-vc mute
+-vc deafen
+-warn
+-warn list
+
+
+4: permits
+-sanelieu
+-id lookup
+
+5: owners
+-give permit
+-global ban
