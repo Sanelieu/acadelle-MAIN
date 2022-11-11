@@ -15,7 +15,7 @@ module.exports = {
         .setColor('#ff8170')
         .setTitle('**owner HELP DECK**')
         .setURL('')
-        .setDescription('Bot version: v0.1.1 (beta)')
+        .setDescription('Bot version: v0.1.2 (beta)')
         .addFields(
             {name:'💛 Commands available: 💛', value: '.kms'}
         )
