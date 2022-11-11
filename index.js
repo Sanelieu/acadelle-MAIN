@@ -15,6 +15,9 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('good morning, sanelieu');
+    client.user.setPresence({
+        status: 'idle'
+    })
     client.user.setActivity(".help", { type: "PLAYING" });
 });
 
@@ -53,7 +56,7 @@ client.on('message', message => {
 // autoreply commands - tier 1
 client.on('message', (message) => {
     if (message.author.bot) return;
-    const unprefixedCommands = ['emmy', 'matt', 'welc', 'welcome'];
+    const unprefixedCommands = ['emmy', 'matt', 'welc', 'welcome', 'dutboot'];
     const isUnprefixedCommand = unprefixedCommands.includes(message.content.toLowerCase());
     if (!isUnprefixedCommand && !message.content.startsWith(prefix)) return;
     let args;
@@ -79,6 +82,11 @@ client.on('message', (message) => {
       } else if (command === 'welcome') {
         client.commands.get('welcome').execute(message, args);
       }
+      if (command === 'dutboot') {
+        client.commands.get('dutboot').execute(message, args);
+      } else if (command === '') {
+        client.commands.get('').execute(message, args);
+      }
   });
 
 // tier 3 handles
@@ -102,6 +110,22 @@ client.on('message', message => {
     } else {
         if(command == 'faq'){
             client.commands.get('faq').execute(message, args);
+        }
+    }
+});
+
+
+// tier 5 handles
+client.on('message', message => {
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    const args =  message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if(command === 'kms'){
+        client.commands.get('kms').execute(message, args);
+    } else {
+        if(command == ''){
+            client.commands.get('').execute(message, args);
         }
     }
 });
