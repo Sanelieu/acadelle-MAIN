@@ -41,12 +41,18 @@ client.on('message', message => {
             client.commands.get('update').execute(message, args, Discord);
         }
     }
+    if(command === 'autoreply'){
+        client.commands.get('autoreply').execute(message, args);
+    } else {
+        if(command == 'ar'){
+            client.commands.get('autoreply').execute(message, args);
+        }
+    }
 });
 // autoreply commands - tier 1
-
 client.on('message', (message) => {
     if (message.author.bot) return;
-    const unprefixedCommands = ['emmy'];
+    const unprefixedCommands = ['emmy', 'matt', 'welc', 'welcome'];
     const isUnprefixedCommand = unprefixedCommands.includes(message.content.toLowerCase());
     if (!isUnprefixedCommand && !message.content.startsWith(prefix)) return;
     let args;
@@ -64,9 +70,14 @@ client.on('message', (message) => {
   
     if (command === 'emmy') {
       client.commands.get('emmy').execute(message, args);
-    } else if (command === '') {
-      client.commands.get('').execute(message, args);
+    } else if (command === 'matt') {
+      client.commands.get('bf').execute(message, args);
     }
+    if (command === 'welc') {
+        client.commands.get('welcome').execute(message, args);
+      } else if (command === 'welcome') {
+        client.commands.get('welcome').execute(message, args);
+      }
   });
 
 // tier 3 handles

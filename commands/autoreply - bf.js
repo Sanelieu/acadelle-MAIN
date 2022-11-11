@@ -1,10 +1,10 @@
 // tier 2 - user 
 
 module.exports = {
-    name: 'emmy',
+    name: 'bf',
     description: 'reaction test command',
     execute(message, args){
-        message.react('1010442218672242760');
-        message.react('1010442107191828571');
+        message.react('1040705735174127626');
+        message.react('1040704563780538448');
     }
 }
