@@ -17,7 +17,7 @@ module.exports = {
         .setColor('#f0c03e')
         .setTitle('**permit HELP DECK**')
         .setURL('')
-        .setDescription('Bot version: v0.1.1 (beta)')
+        .setDescription('Bot version: v0.1.2 (beta)')
         .addFields(
             {name:'NOTE(s): Permits- $150 USD; contact sanelieu1@gmail.com for inquiries \n💛 Commands available: 💛', value: '.plist\n.permittest'}
         )
