@@ -97,6 +97,13 @@ client.on('message', message => {
             client.commands.get('permitlist').execute(message, args);
         }
     }
+    if(command === 'phelp'){
+        client.commands.get('phelp').execute(message, args, Discord);
+    } else {
+        if(command == 'faq'){
+            client.commands.get('faq').execute(message, args);
+        }
+    }
 });
 
 // commands --------------------------------------------------------------------------------------------------
