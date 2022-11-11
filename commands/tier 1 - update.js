@@ -8,7 +8,7 @@ module.exports = {
         .setColor('#4a00ab')
         .setTitle('**acadelle RELEASES**')
         .setURL('')
-        .setDescription('Bot version: v0.1 (beta)')
+        .setDescription('Bot version: v0.1.1 (beta)')
         .addFields(
             {name:'- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💜 New commands available: 💜', value: 'use .help to see them!'}
         )
