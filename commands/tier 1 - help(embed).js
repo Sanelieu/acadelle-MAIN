@@ -10,7 +10,7 @@ module.exports = {
         .setColor('#f0c03e')
         .setTitle('**acadelle HELP DECK**')
         .setURL('')
-        .setDescription(`Bot version: v0.1.1 (beta)`)
+        .setDescription(`Bot version: v0.1.2 (beta)`)
         .addFields(
             {name:'NOTE(s): \n- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💛 Commands available: 💛', value: '.test\n.support\n.plain\n.update\n.help\nautoreact\n\ndutboot\nemmy\nmatt\nwelcome'}
         )
