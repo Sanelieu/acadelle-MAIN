@@ -1,10 +1,9 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js'); // makes it a discord bot
 const client = new Discord.Client();
-const prefix = '.';
-const config = require('./config.json');
+const prefix = '.'; // the bot prefix
+const config = require('./config.json'); // assigns the bot a token lol
 const fs = require('fs');
-//import dotenv from 'dotenv'
-//dotenv.config()
+
 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -13,12 +12,13 @@ for(const file of commandFiles){
     client.commands.set(command.name, command)
 }
 
+
 client.once('ready', () => {
     console.log('good morning, sanelieu');
-    client.user.setPresence({
+    client.user.setActivity(".help", { type: "PLAYING" }); // sets the activity presence; or is supposed to
+    client.user.setPresence({ // makes the bot appear idle
         status: 'idle'
     })
-    client.user.setActivity(".help", { type: "PLAYING" });
 });
 
 
@@ -32,24 +32,24 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     if(command === 'test'){
-        client.commands.get('test').execute(message, args);
+        client.commands.get('test').execute(message, args); // test command
     } else {
         if(command == 'support'){
-            client.commands.get('support').execute(message, args, Discord);
+            client.commands.get('support').execute(message, args, Discord); // support command (embed)
         }
     }
     if(command === 'help'){
-        client.commands.get('help').execute(message, args, Discord);
+        client.commands.get('help').execute(message, args, Discord); // help command (embed)
     } else {
         if(command == 'update'){
-            client.commands.get('update').execute(message, args, Discord);
+            client.commands.get('update').execute(message, args, Discord); // shows latest bot features (embed)
         }
     }
     if(command === 'autoreply'){
-        client.commands.get('autoreply').execute(message, args);
+        client.commands.get('autoreply').execute(message, args); // shows list of autoreplies
     } else {
         if(command == 'ar'){
-            client.commands.get('autoreply').execute(message, args);
+            client.commands.get('autoreply').execute(message, args); // alternative to .autoreply
         }
     }
 });
@@ -57,6 +57,7 @@ client.on('message', message => {
 client.on('message', (message) => {
     if (message.author.bot) return;
     const unprefixedCommands = ['emmy', 'matt', 'welc', 'welcome', 'dutboot'];
+    // lists the unprefixed commands ^^
     const isUnprefixedCommand = unprefixedCommands.includes(message.content.toLowerCase());
     if (!isUnprefixedCommand && !message.content.startsWith(prefix)) return;
     let args;
@@ -73,17 +74,17 @@ client.on('message', (message) => {
     }
   
     if (command === 'emmy') {
-      client.commands.get('emmy').execute(message, args);
+      client.commands.get('emmy').execute(message, args); // reacts to the standalone word "emmy"
     } else if (command === 'matt') {
-      client.commands.get('bf').execute(message, args);
+      client.commands.get('bf').execute(message, args); // reacts to the standalone word "matt"
     }
     if (command === 'welc') {
-        client.commands.get('welcome').execute(message, args);
+        client.commands.get('welcome').execute(message, args); // reacts to the standalone word "welc"
       } else if (command === 'welcome') {
-        client.commands.get('welcome').execute(message, args);
+        client.commands.get('welcome').execute(message, args); // reacts to the standalone word "welcome"
       }
       if (command === 'dutboot') {
-        client.commands.get('dutboot').execute(message, args);
+        client.commands.get('dutboot').execute(message, args); // reacts to the standalone word "dutboot"
       } else if (command === '') {
         client.commands.get('').execute(message, args);
       }
@@ -99,17 +100,17 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 
     if(command === 'permittest'){
-        client.commands.get('permittest').execute(message, args);
+        client.commands.get('permittest').execute(message, args); // test to see if a user has a permit
     } else {
         if(command == 'plist'){
-            client.commands.get('permitlist').execute(message, args);
+            client.commands.get('permitlist').execute(message, args); // list of id's with permits
         }
     }
     if(command === 'phelp'){
-        client.commands.get('phelp').execute(message, args, Discord);
+        client.commands.get('phelp').execute(message, args, Discord); // tier 4 help command
     } else {
         if(command == 'faq'){
-            client.commands.get('faq').execute(message, args);
+            client.commands.get('faq').execute(message, args); // answers to frequently asked questions
         }
     }
 });
@@ -121,11 +122,11 @@ client.on('message', message => {
     const args =  message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === 'kms'){
-        client.commands.get('kms').execute(message, args);
+    if(command === 'kms'){ 
+        client.commands.get('kms').execute(message, args); // kills the bot
     } else {
-        if(command == ''){
-            client.commands.get('').execute(message, args);
+        if(command == 'ohelp'){
+            client.commands.get('ohelp').execute(message, args, Discord);
         }
     }
 });

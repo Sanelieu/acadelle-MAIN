@@ -1,9 +1,18 @@
 // tier 1 - base
 
+const Discord = require("discord.js");
+const permitID = [
+    "896962315512086549", // Emerald
+    "937418844966879243", // Matt
+    "877940496352301096", // Angel
+    "446426955894489089"  // Vul (alt)
+];
+
 module.exports = {
     name: 'phelp', 
     description: 'phelp embed',
     execute(message, args, discord){
+        if (!permitID.includes(message.author.id)) return;
         const NewEmbed = new discord.MessageEmbed()
         .setColor('#f0c03e')
         .setTitle('**permit HELP DECK**')
