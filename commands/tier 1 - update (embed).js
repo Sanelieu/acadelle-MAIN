@@ -1,5 +1,7 @@
 // tier 1 - base
 
+const botversion = 'acadelle v0.1.2'
+
 module.exports = {
     name: 'update', 
     description: 'update embed',
@@ -8,7 +10,7 @@ module.exports = {
         .setColor('#f0c03e')
         .setTitle('**acadelle RELEASES**')
         .setURL('')
-        .setDescription('Bot version: v0.1.2 (beta)')
+        .setDescription(botversion)
         .addFields(
             {name:'- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💛 New commands available: 💛', value: 'use .help to see them!'}
         )

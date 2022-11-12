@@ -5,6 +5,7 @@ const ownerID = [
     "896962315512086549", // Emerald
     "446426955894489089"  // Vul (alt)
 ];
+const botversion = 'acadelle v0.1.2'
 
 module.exports = {
     name: 'ohelp', 
@@ -15,7 +16,7 @@ module.exports = {
         .setColor('#ff8170')
         .setTitle('**owner HELP DECK**')
         .setURL('')
-        .setDescription('Bot version: v0.1.2 (beta)')
+        .setDescription(botversion)
         .addFields(
             {name:'💛 Commands available: 💛', value: '.kms'}
         )

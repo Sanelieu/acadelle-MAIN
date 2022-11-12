@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = '.'; // the bot prefix
 const config = require('./config.json'); // assigns the bot a token lol
 const fs = require('fs');
-const botversion = 'v0.1.2'
+
 
 
 client.commands = new Discord.Collection();
