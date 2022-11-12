@@ -1,4 +1,4 @@
-// tier 1 - base
+// tier 4 - permits
 
 const Discord = require("discord.js");
 const permitID = [

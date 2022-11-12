@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = '.'; // the bot prefix
 const config = require('./config.json'); // assigns the bot a token lol
 const fs = require('fs');
+const botversion = 'v0.1.2'
 
 
 client.commands = new Discord.Collection();
@@ -92,6 +93,27 @@ client.on('message', (message) => {
 
 // tier 3 handles
 // ban, unban, kick, timeout, etc.
+client.on('message', message => {
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    const args =  message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if(command === 'ban'){
+        client.commands.get('ban').execute(message, args); // should ban a user
+    } else {
+        if(command == 'kick'){
+            client.commands.get('kick').execute(message, args); // should kick a user
+        }
+    }
+    if(command === 'ahelp'){
+        client.commands.get('ahelp').execute(message, args, Discord); // guild admin help command
+    } else {
+        if(command == ''){
+            client.commands.get('').execute(message, args); // 
+        }
+    }
+
+});
 
 // tier 4 handles
 client.on('message', message => {
@@ -133,7 +155,6 @@ client.on('message', message => {
 
 // commands --------------------------------------------------------------------------------------------------
 // these were made offline, and to be tested
-
 
 
 // -----------------------------------------------------------------------------------------------------------

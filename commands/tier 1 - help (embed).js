@@ -12,7 +12,7 @@ module.exports = {
         .setURL('')
         .setDescription(`Bot version: v0.1.2 (beta)`)
         .addFields(
-            {name:'NOTE(s): \n- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💛 Commands available: 💛', value: '.test\n.support\n.plain\n.update\n.help\nautoreact\n\ndutboot\nemmy\nmatt\nwelcome'}
+            {name:'NOTE(s): \n- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💛 Commands available: 💛', value: '.test\n.support\n.plain\n.update\n.help\nautoreact\n\ndutboot\nemmy\nmatt\nwelcome\n\n**other help commands:**\nguild admins: .ahelp\npermits: .phelp\nbot owners: .ohelp'}
         )
         .setImage('https://i.pinimg.com/originals/64/76/27/64762723fa4fdcf6114ca8cd970d1e60.gif');
         
