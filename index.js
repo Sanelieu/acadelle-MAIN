@@ -17,9 +17,6 @@ for(const file of commandFiles){
 client.once('ready', () => {
     console.log('good morning, sanelieu');
     client.user.setActivity(".help", { type: "PLAYING" }); // sets the activity presence; or is supposed to
-    client.user.setPresence({ // makes the bot appear idle
-        status: 'idle'
-    })
 });
 
 

@@ -10,9 +10,7 @@
 -afk
 
 3: admins/mods
--ban
 -unban
--kick
 -timeout
 -clear
 -new channel
