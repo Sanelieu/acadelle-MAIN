@@ -18,7 +18,7 @@ module.exports = {
         .setURL('')
         .setDescription(botversion)
         .addFields(
-            {name:'💛 Commands available: 💛', value: '.kms'}
+            {name:'💛 Commands available: 💛', value: '``.kms``  ``.valkrecovery``'}
         )
         .setImage('https://i.pinimg.com/originals/99/c6/ca/99c6cadb02d2174dfcbebe7f46bba09f.gif');
         

@@ -12,7 +12,7 @@ module.exports = {
         .setURL('')
         .setDescription(botversion)
         .addFields(
-            {name:'NOTE(s): \n- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💛 Commands available: 💛', value: '.kick\n.ban'}
+            {name:'NOTE(s): \n- Slash commands are not currently available, but it\'s a work in progress\n - New button UI for the .help command coming soon\n\n💛 Commands available: 💛', value: '``.kick``  ``.ban``'}
         )
         .setImage('https://i.pinimg.com/originals/e9/57/c1/e957c15c5087a32d46c5bf2da5faef10.gif');
         

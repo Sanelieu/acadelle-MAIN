@@ -20,7 +20,7 @@ module.exports = {
         .setURL('')
         .setDescription(botversion)
         .addFields(
-            {name:'NOTE(s): Permits- $150 USD; contact sanelieu1@gmail.com for inquiries \n💛 Commands available: 💛', value: '.plist\n.permittest'}
+            {name:'NOTE(s): Permits- $150 USD; contact sanelieu1@gmail.com for inquiries \n💛 Commands available: 💛', value: '``.plist``  ``.permittest``'}
         )
         .setImage('https://i.pinimg.com/originals/39/11/d8/3911d824cefef95bb5fea1d07b65c29d.gif');
         

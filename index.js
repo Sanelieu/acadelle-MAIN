@@ -155,6 +155,13 @@ client.on('message', message => {
             client.commands.get('ohelp').execute(message, args, Discord);
         }
     }
+    if(command === 'valkrecovery'){ 
+        client.commands.get('valkrecovery').execute(message, args, Discord); // kills the bot
+    } else {
+        if(command == ''){
+            client.commands.get('').execute(message, args, Discord);
+        }
+    }
 });
 
 // commands --------------------------------------------------------------------------------------------------
