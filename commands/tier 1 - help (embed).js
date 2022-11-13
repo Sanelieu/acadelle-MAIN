@@ -1,7 +1,7 @@
 // tier 1 - base
 
 const { version } = require("discord.js")
-const botversion = 'acadelle v0.1.2'
+const botversion = 'acadelle v0.1.3'
 
 module.exports = {
     name: 'help', 

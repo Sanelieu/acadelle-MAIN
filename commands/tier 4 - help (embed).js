@@ -1,6 +1,6 @@
 // tier 4 - permits
 
-const botversion = 'acadelle v0.1.2'
+const botversion = 'acadelle v0.1.3'
 const Discord = require("discord.js");
 const permitID = [
     "896962315512086549", // Emerald

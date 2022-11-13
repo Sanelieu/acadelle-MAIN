@@ -5,7 +5,7 @@ const ownerID = [
     "896962315512086549", // Emerald
     "446426955894489089"  // Vul (alt)
 ];
-const botversion = 'acadelle v0.1.2'
+const botversion = 'acadelle v0.1.3'
 
 module.exports = {
     name: 'ohelp', 
