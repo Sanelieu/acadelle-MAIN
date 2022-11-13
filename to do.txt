@@ -1,32 +1,63 @@
 1: base
+🟩-autoreact 				[*varies]		*sends reacts when a specific word is said
+🟩-help 					[.help]		*sends a list of available commands
 -autoreply
+-market embed
 
 2: user
+🟩-test	 				[.test]
+🟩-support 					[.support]
+🟩-faq 					[.faq]
+-user info
+-user avatar
+-user banner
 -self ban
 -vc join
 -vc disconnect
 -ticket create
 -mod mail
 -afk
+-guild ranking
+-guild activity leaderboard
+-guild specific autoreply
 
 3: admins/mods
--unban
--timeout
--clear
--new channel
--vc ban
--vc kick
--vc timeout
--vc mute
--vc deafen
--warn
--warn list
+🟩-help 					[.ahelp]		*sends a list of available commands
+🟩-kick 					[.kick]		*kicks a user from the guild
+🟩-ban 					[.ban]		*bans a user from the guild
+-unban			*unbans a user from the guild
+-timeout			*times out a user for a specific period of time
+-clear			*deletes a channel after cloning it and pings the user who used the command
+-new channel		*creates a new channel
+-vc ban			*permanently locks a vc for a user
+-vc kick			*kicks a user from the current vc
+-vc timeout			*locks the channel for a user for a specific amount of time
+-vc mute			*server mutes a user in vc
+-vc deafen			*server deafens a user in vc
+-warn				*warns a user and adds to their warn list
+-warn list			*sends a list of a users warnings
+-self role embeds		*sends an embed that gives a self role when a user reacts
+-color role embeds 	*sends an embed that gives a color role when a user reacts
+-boost 			*shows that a member has boosted and how many times
+-reaction role 		*gives a role when a user reacts
 
 
 4: permits
+🟩-permit test 				[.permittest]	*checks to see if a user contains a permit
+🟩-permit list 				[.plist]		*sends a list of id's that have permits
+🟩-help 					[.phelp]		*sends a list of available commands
 -sanelieu
 -id lookup
+-guild specific autoreact
 
 5: owners
--give permit
--global ban
+🟩-suicide 					[.kms]		*kills the bot
+🟩-help 					[.ohelp]		*sends a list of available commands
+-give permit		*gives a permit to a user (w/ id usage)
+-global ban			*bans a user from all guilds the bot is in
+-blacklist			*prevents a user from using any tier 2+ bot commands
+
+
+GENERAL:
+- make buttons for help deck(s)
+- turn all commands to (/)

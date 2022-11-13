@@ -20,6 +20,12 @@ client.once('ready', () => {
     client.user.setActivity(".help", { type: "PLAYING" }); // sets the activity presence; or is supposed to
 });
 
+//this seems to not do anything lol
+client.on('messageCreate', (message) => {
+	console.log(message.content);
+	console.log(message.createdAt.toDateString());
+	console.log(message.author.tag);
+})
 
 
 // commands --------------------------------------------------------------------------------------------------
@@ -157,4 +163,3 @@ client.on('message', message => {
 
 // -----------------------------------------------------------------------------------------------------------
 client.login(config.token) //acadelle
-
