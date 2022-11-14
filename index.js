@@ -113,7 +113,7 @@ client.on('message', message => {
         client.commands.get('ahelp').execute(message, args, Discord); // guild admin help command
     } else {
         if(command == ''){
-            client.commands.get('').execute(message, args); // 
+            client.commands.get('').execute(message, args, Discord); // 
         }
     }
 
@@ -139,6 +139,13 @@ client.on('message', message => {
             client.commands.get('faq').execute(message, args); // answers to frequently asked questions
         }
     }
+    if(command === ''){
+        client.commands.get('').execute(message, args, Discord); // tier 4 help command
+    } else {
+        if(command == ''){
+            client.commands.get('').execute(message, args); // answers to frequently asked questions
+        }
+    }
 });
 
 
@@ -152,11 +159,11 @@ client.on('message', message => {
         client.commands.get('kms').execute(message, args); // kills the bot
     } else {
         if(command == 'ohelp'){
-            client.commands.get('ohelp').execute(message, args, Discord);
+            client.commands.get('ohelp').execute(message, args, Discord); // owner help command
         }
     }
     if(command === 'valkrecovery'){ 
-        client.commands.get('valkrecovery').execute(message, args, Discord); // kills the bot
+        client.commands.get('valkrecovery').execute(message, args, Discord); // valkyrie recovery
     } else {
         if(command == ''){
             client.commands.get('').execute(message, args, Discord);

@@ -15,9 +15,10 @@ const daidinevermantion = new MessageEmbed()
         daidinevermantion.setDescription('Please Mention a user to ban ;-;')
         daidinevermantion.addField('Usage','``.ban <USER_MENTION> <OPTIONAL REASON>``')
         daidinevermantion.setColor('#f0c03e')
+
         if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('You can\'t use that!')
         if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('I don\'t think I have permissions for that..')
-
+        
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         
         if(!args[0]) return message.channel.send(daidinevermantion);
