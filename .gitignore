@@ -6,3 +6,4 @@ node_modules
 run Acadelle.cmd
 throwaway - embeds.js
 throwaway - plain.js
+package-lock.json
