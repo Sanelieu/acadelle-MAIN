@@ -1,4 +1,4 @@
-//tier 2 - user
+// tier 0 - throw away
 
 module.exports = {
     name: 'plain',

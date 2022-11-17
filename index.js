@@ -112,8 +112,8 @@ client.on('message', message => {
     if(command === 'ahelp'){
         client.commands.get('ahelp').execute(message, args, Discord); // guild admin help command
     } else {
-        if(command == ''){
-            client.commands.get('').execute(message, args, Discord); // 
+        if(command == 'e'){
+            client.commands.get('e').execute(message, args, Discord); // 
         }
     }
 
